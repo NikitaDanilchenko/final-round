@@ -76,8 +76,8 @@
           letter-spacing: -0.2px;
           padding-left: 20px;
           &::before {
-            content: "";
-            // background: url("/src/img/icon/highlight-aside.svg") 0 0 no-repeat;
+            content: url("../../img/icon/highlight-aside.svg");
+            // background: url("../../img/icon/highlight-aside.svg") 0 0 no-repeat;
             width: 4px;
             height: 32px;
             position: absolute;

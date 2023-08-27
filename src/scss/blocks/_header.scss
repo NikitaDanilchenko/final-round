@@ -1,0 +1,114 @@
+.menu {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 320px;
+  min-height: 88px;
+  background-color: #fff;
+  border-bottom: 1px solid #d9fff5;
+
+  @media (min-width: 1120px) {
+    display: none;
+  }
+  &__burger {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__burger &__icon {
+    margin: 0 16.73px;
+
+    @media (min-width: 768px) {
+      margin: 0 42.73px 0 24px;
+    }
+  }
+  &__logo::before {
+    content: "";
+    position: absolute;
+    min-height: 32px;
+    width: 2px;
+    background-color: #eaeaea;
+    margin-left: 109px;
+
+    @media (min-width: 768px) {
+      background-color: #fff;
+    }
+    &::after {
+      @media (min-width: 768px) {
+        content: "";
+        position: absolute;
+        height: 32px;
+        width: 2px;
+        background-color: #eaeaea;
+        margin-left: -20.73px;
+      }
+    }
+  }
+
+  &__icon_activ {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border: none;
+    padding: 0;
+    margin-right: 8px;
+
+    @media (min-width: 768px) {
+      margin: 0 8px 0 32px;
+    }
+    &::after {
+      @media (min-width: 768px) {
+        content: "";
+        position: absolute;
+        height: 32px;
+        width: 2px;
+        background-color: #eaeaea;
+        margin-left: -20px;
+      }
+    }
+  }
+
+  &__icon-wrap {
+    display: flex;
+    flex-direction: row;
+    &_mod_mobile {
+      display: none;
+
+      @media (min-width: 768px) {
+        display: flex;
+      }
+
+      @media (min-width: 1120px) {
+        display: none;
+      }
+    }
+    &_mod__fixed {
+      display: flex;
+      flex-flow: nowrap row;
+      /* margin-right: 24px; */
+    }
+  }
+
+  &__icon,
+  &__logo {
+    background-color: #fff;
+    border: none;
+    padding: inherit;
+  }
+
+  &__icon {
+    margin: 0 8px;
+  }
+
+  &__icon-wrap_mod__fixed &__icon {
+    flex-wrap: nowrap;
+    margin-right: 24px;
+  }
+}

@@ -1,0 +1,350 @@
+button {
+  border: none;
+  background: inherit;
+  padding: none;
+}
+
+.technic,
+.types,
+.price {
+  background-color: #f8f8f8;
+}
+
+.technic__title,
+.types__title,
+.price__title {
+  color: #7e7e82;
+  font-family: "TTLakes-Regular";
+  font-size: 16px;
+  //   font-style: normal;
+  //   font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  border-top: 1px solid #d9fff5;
+  padding: 16px;
+  background: linear-gradient(270deg, #f8f8f8 0%, #fff 100%) 0 0 no-repeat;
+
+  @media (min-width: 768px) {
+    height: 56px;
+    padding-left: 24px;
+  }
+
+  @media (min-width: 1120px) {
+    padding-left: 32px;
+  }
+}
+
+.container {
+  max-width: 94%;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    min-width: 720px;
+  }
+}
+
+.swiper {
+  margin: 0 20px;
+  padding-top: 24px;
+  padding-bottom: 66px;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    padding-bottom: 20px;
+  }
+}
+
+.swiper__content {
+  @media (min-width: 768px) {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 224px);
+    gap: 16px 23px;
+  }
+
+  @media (min-width: 1120px) {
+    grid-template-columns: repeat(auto-fit, 240px);
+  }
+}
+
+.swiper__card {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 0 16px;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+}
+
+.swiper__cards-types {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  height: 160px;
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+}
+
+.swiper__subtitle-types {
+  align-self: flex-start;
+  font-family: "TTLakes-Medium";
+  color: #1b1c21;
+}
+
+.swiper__button-types {
+  align-self: flex-end;
+}
+
+.swiper-pagination {
+  padding-bottom: 25px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: #b5b6bc;
+}
+
+.technic__click,
+.types__click {
+  display: none;
+  font-family: "TTLakes-Medium";
+  color: #1b1c21;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  padding-left: 27px;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    display: block;
+    padding-bottom: 34px;
+  }
+}
+
+.technic__click_show::before,
+.types__click_show::before {
+  content: "";
+  background: url("../../img/icon/click_down.svg");
+  left: 5px;
+  top: -1px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+
+.mod {
+  display: none;
+}
+
+.technic__click_hide::before,
+.types__click_hide::before {
+  content: "";
+  background: url("../public/images/click_up.svg");
+  left: 5px;
+  top: -1px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+
+.swiper-price {
+  padding-top: 16px;
+}
+
+.price__header {
+  /* box-sizing: border-box; */
+  display: grid;
+  /* justify-content: space-between; */
+  grid-template-columns: 4fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  color: #7e7e82;
+  font-family: "TTLakes-Regular";
+  font-size: 14px;
+  margin-top: 31px;
+  padding: 0 16px;
+  /* font-style: normal; */
+  /* font-weight: 500; */
+  line-height: 16px;
+  /* 114.286% */
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.swiper-price__content {
+  @media (min-width: 768px) {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    background: #fff;
+    padding: 0 16px;
+  }
+}
+
+.swiper-price__card {
+  display: grid;
+  background: #fff;
+  font-family: "TTLakes-Medium";
+  color: #1b1c21;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 200px;
+    box-sizing: border-box;
+    justify-content: start;
+    align-items: center;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid #eaeaea;
+    background: #fff;
+    font-family: "TTLakes-Medium";
+    color: #1b1c21;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 23px 0;
+    border-top: 1px solid #eaeaea;
+  }
+}
+
+.swiper-price__service {
+  position: relative;
+
+  @media (max-width: 767px) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.swiper-price__service::before {
+  /* @media (max-width: 768px) { */
+  content: "Ремонтные услуги";
+  display: block;
+  color: #7e7e82;
+  font-family: "TTLakes-Regular";
+  font-size: 14px;
+  /* font-style: normal; */
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  opacity: 0.7218;
+  position: absolute;
+  top: -15px;
+  left: 0;
+
+  /* height: 16px;
+    width: 54px; */
+  /* z-index: 10000; */
+}
+
+@media (min-width: 768px) {
+  .swiper-price__service::before {
+    content: "";
+  }
+}
+
+/* } */
+
+.swiper-price__value {
+  position: relative;
+
+  @media (max-width: 767px) {
+    grid-column-start: 1;
+  }
+}
+
+.swiper-price__value::before {
+  /* @media (max-width: 768px) { */
+  content: "Цена";
+  display: block;
+  color: #7e7e82;
+  font-family: "TTLakes-Regular";
+  font-size: 14px;
+  /* font-style: normal; */
+  font-weight: 500;
+  line-height: 16px;
+  position: absolute;
+  opacity: 0.7218;
+  bottom: 15px;
+  left: 0;
+
+  /* height: 16px;
+    width: 54px; */
+  /* z-index: 10000; */
+}
+
+@media (min-width: 768px) {
+  .swiper-price__value::before {
+    content: "";
+  }
+}
+
+.swiper-price__time {
+  position: relative;
+
+  @media (max-width: 767px) {
+    grid-column-start: 1;
+  }
+}
+
+.swiper-price__time::before {
+  /* @media (max-width: 768px) { */
+  content: "Срок";
+  display: block;
+  color: #7e7e82;
+  font-family: "TTLakes-Regular";
+  font-size: 14px;
+  /* font-style: normal; */
+  font-weight: 500;
+  line-height: 16px;
+  position: absolute;
+  opacity: 0.7218;
+  bottom: 15px;
+  left: 0;
+
+  /* height: 16px;
+    width: 54px; */
+  /* z-index: 10000; */
+}
+
+@media (min-width: 768px) {
+  .swiper-price__time::before {
+    content: "";
+  }
+}
+
+.swiper-price__button {
+  @media (max-width: 767px) {
+    grid-column-start: 2;
+  }
+}
+
+.swiper-price__card:first-child {
+  border-top: none;
+}

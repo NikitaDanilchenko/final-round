@@ -4,9 +4,15 @@
 @import "vars";
 @import "settings";
 
-@import "blocks/aside.scss";
+@import "blocks/aside";
 @import "blocks/header";
-@import "blocks/title and nav";
+@import "blocks/nav";
 @import "blocks/text";
 @import "blocks/technic";
 @import "blocks/footer";
+
+.main {
+  @media (min-width: 1440px) {
+    margin-left: 326px;
+  }
+}
