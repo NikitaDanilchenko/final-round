@@ -1,0 +1,209 @@
+.price {
+  background-color: $background;
+  &__title {
+    color: $item-text-color;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    border-top: 1px solid #d9fff5;
+    padding: 16px;
+    background: linear-gradient(270deg, #f8f8f8 0%, #fff 100%) 0 0 no-repeat;
+
+    @media (min-width: 768px) {
+      height: 56px;
+      padding-left: 24px;
+    }
+
+    @media (min-width: 1120px) {
+      padding-left: 32px;
+    }
+  }
+  &__header {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    color: $item-text-color;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 31px;
+    padding: 0 16px;
+    line-height: 16px;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  &__specification {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    color: $main-text-color;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    padding-bottom: 20px;
+    margin: 0 16px;
+    @media (min-width: 768px) {
+      max-width: 421px;
+    }
+  }
+  &__link {
+    display: flex;
+    color: $main-text-color;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 10px;
+    letter-spacing: -0.2px;
+    padding-bottom: 40px;
+    margin: 0 16px;
+    @media (max-width: 768px) {
+      max-width: 192px;
+    }
+    img {
+      position: relative;
+      top: 9px;
+    }
+  }
+}
+.swiper-price {
+  padding-top: 16px;
+  &__content {
+    @media (min-width: 768px) {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      border-radius: 6px;
+      background: $white;
+      padding: 0 16px;
+    }
+  }
+  &__card {
+    display: grid;
+    background: $white;
+    color: $main-text-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      height: 200px;
+      box-sizing: border-box;
+      justify-content: start;
+      align-items: center;
+      padding: 16px;
+      border-radius: 6px;
+      border: 1px solid $swiper-border;
+      background: $white;
+      color: $main-text-color;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: 4fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      align-items: center;
+      padding: 23px 0;
+      border-top: 1px solid $swiper-border;
+    }
+  }
+
+  &__service {
+    position: relative;
+
+    @media (max-width: 767px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    &::before {
+      content: "Ремонтные услуги";
+      display: block;
+      color: $item-text-color;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0.2px;
+      opacity: 0.7218;
+      position: absolute;
+      top: -15px;
+      left: 0;
+    }
+    @media (min-width: 768px) {
+      &::before {
+        content: "";
+      }
+    }
+    &__value {
+      position: relative;
+
+      @media (max-width: 767px) {
+        grid-column-start: 1;
+      }
+      &::before {
+        content: "Цена";
+        display: block;
+        color: $item-text-color;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        position: absolute;
+        opacity: 0.7218;
+        bottom: 15px;
+        left: 0;
+      }
+
+      @media (min-width: 768px) {
+        &::before {
+          content: "";
+        }
+      }
+    }
+  }
+
+  &__time {
+    position: relative;
+
+    @media (max-width: 767px) {
+      grid-column-start: 1;
+    }
+    &::before {
+      content: "Срок";
+      display: block;
+      color: $item-text-color;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      position: absolute;
+      opacity: 0.7218;
+      bottom: 15px;
+      left: 0;
+    }
+    @media (min-width: 768px) {
+      &::before {
+        content: "";
+      }
+    }
+  }
+
+  &__button {
+    @media (max-width: 767px) {
+      grid-column-start: 2;
+    }
+  }
+
+  &__card:first-child {
+    border-top: none;
+  }
+}

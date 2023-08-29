@@ -1,0 +1,62 @@
+.swiper {
+  margin: 0 20px;
+  padding-top: 24px;
+  padding-bottom: 66px;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  &__content {
+    @media (min-width: 768px) {
+      width: 100%;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, 224px);
+      gap: 16px 23px;
+    }
+
+    @media (min-width: 1120px) {
+      grid-template-columns: repeat(auto-fit, 240px);
+    }
+  }
+  &__card {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    padding: 0 16px;
+    border-radius: 6px;
+    border: 1px solid $swiper-border;
+    background: $white;
+  }
+  &__cards-types {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    height: 160px;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid $swiper-border;
+    background: $white;
+  }
+  &__subtitle-types {
+    align-self: flex-start;
+    color: $main-text-color;
+  }
+  &__button-types {
+    align-self: flex-end;
+  }
+  &-pagination {
+    padding-bottom: 25px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+    &-bullet {
+      background-color: #b5b6bc;
+    }
+  }
+}

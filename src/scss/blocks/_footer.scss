@@ -1,0 +1,30 @@
+.footer {
+  color: $item-text-color;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  border-top: 1px solid #d9fff5;
+  &__content {
+    padding: 16px 0 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(3, 220px);
+    }
+  }
+  &__team {
+    @media (min-width: 768px) {
+      text-align: start;
+    }
+  }
+  &__info {
+    @media (min-width: 768px) {
+      text-align: end;
+    }
+  }
+}

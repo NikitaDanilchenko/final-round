@@ -71,33 +71,22 @@
     </section>
   </aside>
   <header class="menu">
-    <div class="menu__burger">
-      <button class="menu__burger menu__icon">
-        <img src="img/icon/burger.svg" alt="burger">
-      </button>
-      <button class="menu__burger menu__logo">
-        <img src="img/icon/Group.svg" alt="Group">
-      </button>
-    </div>
-    <div class="menu__icon-wrap">
-      <div class="menu__icon-wrap menu__icon-wrap_mod_mobile">
-        <button class=" menu__icon">
-          <img src="img/icon/ic-call.svg" alt="Call">
-        </button>
-        <button class=" menu__icon">
-          <img src="img/icon/ic-chat.svg" alt="Chat">
-        </button>
-        <button class=" menu__icon">
-          <img src="img/icon/ic-profile.svg" alt="Profile">
-        </button>
-      </div>
-      <div class="menu__icon-wrap menu__icon-wrap_mod__fixed">
-        <button class=" menu__icon_activ">
-          <img src="img/icon/checkstatus.svg" alt="checkstatus">
-        </button>
-        <button class="menu__icon">
-          <img src="img/icon/repair.svg" alt="repair">
-        </button>
+    <div class="container">
+      <div class="menu__nav">
+        <div class="menu__burger">
+          <img class="btn menu__icon hamburger" src="img/icon/burger.svg" alt="burger">
+          <div class="menu__divider menu__divider_mod"></div>
+          <img class="menu__logo" src="img/icon/Group.svg" alt="Group">
+        </div>
+        <div class="menu__icon-wrap">
+          <img class="btn menu__hiden menu-call" src="img/icon/ic-call.svg" alt="Call">
+          <img class="btn menu__hiden menu-chat" src="img/icon/ic-chat.svg" alt="Chat">
+          <img class="btn menu__hiden" src="img/icon/ic-profile.svg" alt="Profile">
+
+          <div class="menu__divider menu__divider_icon-wrap"></div>
+          <img class="btn menu__icon" src="img/icon/checkstatus.svg" alt="checkstatus">
+          <img class="btn menu__icon" src="img/icon/repair.svg" alt="repair">
+        </div>
       </div>
     </div>
   </header>
@@ -106,7 +95,7 @@
       <div class="services__header">
         <div class="services-title">
           <picture class="services-title__logo">
-            <source srcset="src/img/icon/highlight_1120.svg" media="(min-width:1120px)">
+            <source srcset="/img/icon/highlight_1120.svg" media="(min-width:1120px)">
             <img src="img/icon/highlight.svg" alt="highlight">
           </picture>
           <h1 class="services-title__text">
@@ -130,12 +119,12 @@
 
       <div class="services__nav">
         <nav class="services__nav scroll">
-          <a class="scroll__item scroll__item_activ" href="#">Ремонтируемые устройства</a>
+          <a class="scroll__item" href="#">Ремонтируемые устройства</a>
           <a class="scroll__item" href="#">Дополнительные услуги</a>
           <a class="scroll__item" href="#">Цены на услуги</a>
           <a class="scroll__item" href="#">Адреса сервисных центров</a>
           <a class="scroll__item" href="#">Специальные цены</a>
-          <a class="scroll__item scroll__item_last" href="#">Отзывы</a>
+          <a class="scroll__item" href="#">Отзывы</a>
         </nav>
       </div>
       <div class="services__text">

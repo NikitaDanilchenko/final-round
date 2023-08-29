@@ -1,0 +1,201 @@
+.services {
+  background-color: $background;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+
+    @media (min-width: 1440px) {
+      margin-top: 42px;
+    }
+  }
+  &-title {
+    display: flex;
+    flex-flow: nowrap row;
+
+    @media (max-width: 1439px) {
+      padding-top: 24px;
+    }
+    &__logo {
+      align-self: center;
+    }
+    &__text {
+      color: $main-text-color;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 40px;
+      letter-spacing: -0.6px;
+      margin-left: 10px;
+
+      @media (min-width: 1120px) {
+        margin: 0 32px 0 32px;
+      }
+    }
+  }
+  .header-desktop {
+    display: flex;
+    flex-flow: wrap row;
+    gap: 16px;
+    margin-right: 16px;
+
+    @media (max-width: 1439px) {
+      display: none;
+    }
+    &__text {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      color: $main-text-color;
+      text-align: right;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      &_mod_desktop {
+        display: flex;
+        justify-items: space-between;
+        background: inherit;
+        border: inherit;
+        gap: 8px;
+      }
+    }
+  }
+  &__text {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  &-text {
+    display: flex;
+    flex-direction: column;
+    &__all {
+      display: inline;
+      max-width: 288px;
+      max-height: 90px;
+      color: $main-text-color;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+      margin: 0px 16px;
+
+      @media (min-width: 768px) {
+        min-width: 312px;
+        min-height: 160px;
+        line-height: 20px;
+      }
+
+      @media (min-width: 1120px) {
+        min-width: 490px;
+        line-height: 20px;
+        margin-left: 32px;
+      }
+      &_768 {
+        display: none;
+
+        @media (min-width: 768px) {
+          display: inline;
+        }
+      }
+
+      &_1120 {
+        display: none;
+
+        @media (min-width: 1120px) {
+          display: inline;
+        }
+      }
+    }
+    &__button {
+      display: flex;
+      border: none;
+      background-color: $background;
+      justify-content: flex-start;
+      margin-left: 20px;
+      min-width: 100px;
+      color: $main-text-color;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      margin-bottom: 12.56px;
+      position: relative;
+      padding-left: 15px;
+
+      @media (min-width: 768px) {
+        margin-top: 10px;
+      }
+
+      @media (min-width: 1120px) {
+        margin: 10px 0 0 25px;
+        padding-left: 15px;
+      }
+      &::before {
+        content: url("/img/icon/ic-expand.svg");
+        position: absolute;
+        left: -5px;
+      }
+    }
+  }
+  &-image {
+    display: flex;
+    flex-flow: wrap row;
+    &__logotip {
+      width: 100%;
+
+      @media (min-width: 768px) {
+        width: 360px;
+      }
+
+      @media (min-width: 1120px) {
+        width: 531.346px;
+      }
+    }
+  }
+}
+
+// .services__nav {
+// }
+
+.scroll {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 16px 16px 24px;
+  overflow-x: auto;
+
+  @media (min-width: 1120px) {
+    overflow-x: none;
+    flex-flow: wrap row;
+    margin: 8.37px 19px 14.63px 0;
+  }
+  &__item {
+    max-width: 245.69px;
+    flex-shrink: 0;
+    color: $item-text-color;
+    font-size: 16px;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding: 8px 9px 8px 16.54px;
+
+    @media (min-width: 1120px) {
+      max-width: 242.849px;
+      margin: 8.37px 0 14.63px 21px;
+    }
+    &:hover {
+      border: 2px solid $border-color;
+      border-radius: 6px;
+      background: $white;
+    }
+  }
+}

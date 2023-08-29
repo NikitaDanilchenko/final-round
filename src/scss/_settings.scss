@@ -8,17 +8,34 @@ html {
   box-sizing: inherit;
 }
 
-*:focus{
+*:focus {
   outline: 2px solid transparent;
 }
 
 body {
   overflow-anchor: none;
   margin: 0;
-  font-family: 'Barlow', sans-serif;
+  font-family: "TTLakes", sans-serif;
   color: $main-text-color;
   background-color: $background;
   scroll-behavior: smooth;
+}
+// Добавочные стили
+body {
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+
+  @media (min-wudth: 768px) {
+    min-width: 768px;
+  }
+
+  @media (min-width: 1440px) {
+    min-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 
 a {
@@ -26,7 +43,13 @@ a {
   color: inherit;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
   padding: 0;
 }
@@ -63,15 +86,21 @@ textarea::-moz-placeholder {
 
 input:focus,
 textarea:focus {
-  outline:none;
+  outline: none;
 }
 
-footer {
-  background: $footer-background;
-}
+// footer {
+//   background: $footer-background;
+// }
 
 .is--hidden {
   display: none !important;
+}
+
+button {
+  border: none;
+  background: inherit;
+  padding: none;
 }
 
 .btn--reset {
@@ -86,23 +115,21 @@ footer {
   outline: none;
 }
 
-.error {
-  border: 2px var(--error-red) solid !important;
-}
+// .error {
+//   border: 2px var(--error-red) solid !important;
+// }
 
 .container {
-  max-width: 1810px;
+  max-width: 94%;
   margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
 
-  @media (max-width: 1200px) {
-    padding-right: 50px;
-    padding-left: 50px;
+  @media (min-width: 768px) {
+    min-width: 720px;
   }
+}
 
-  @media (max-width: 576px) {
-    padding-right: 15px;
-    padding-left: 15px;
+.main {
+  @media (min-width: 1440px) {
+    margin-left: 326px;
   }
 }

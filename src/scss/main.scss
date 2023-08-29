@@ -6,13 +6,9 @@
 
 @import "blocks/aside";
 @import "blocks/header";
-@import "blocks/nav";
-@import "blocks/text";
+@import "blocks/services";
 @import "blocks/technic";
 @import "blocks/footer";
-
-.main {
-  @media (min-width: 1440px) {
-    margin-left: 326px;
-  }
-}
+@import "blocks/types";
+@import "blocks/price";
+@import "blocks/swiper";

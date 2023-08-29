@@ -3,7 +3,7 @@
   position: fixed;
   width: 326px;
   height: 100vh;
-  background-color: #fff;
+  background-color: $white;
   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),
     -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
   z-index: 1;
@@ -13,7 +13,6 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 100%;
-    margin-top: inherit;
   }
   &__top {
     display: flex;
@@ -38,7 +37,7 @@
         }
       }
 
-      &__burger &__icon {
+      &__burger .header-aside__icon {
         @media (min-width: 1440px) {
           display: none;
         }
@@ -56,7 +55,6 @@
         display: flex;
         align-items: center;
         color: #1b1c21;
-        font-family: "TTLakes-Medium";
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -68,7 +66,6 @@
         transition: all 0.5s ease 0.2s;
         &:hover {
           color: #7e7e82;
-          font-family: "TTLakes-Medium";
           font-size: 16px;
           font-style: normal;
           font-weight: 500;
@@ -76,8 +73,8 @@
           letter-spacing: -0.2px;
           padding-left: 20px;
           &::before {
-            content: url("../../img/icon/highlight-aside.svg");
-            // background: url("../../img/icon/highlight-aside.svg") 0 0 no-repeat;
+            content: "";
+            background: url("/img/icon/highlight-aside.svg") 0 0 no-repeat;
             width: 4px;
             height: 32px;
             position: absolute;
@@ -114,9 +111,8 @@
         flex-flow: wrap column;
         justify-content: flex-start;
         margin: 16px 0 0 24px;
-        .foot__contacts-email {
+        &-email {
           color: #1b1c21;
-          font-family: TT Lakes;
           font-size: 16px;
           font-style: normal;
           font-weight: 500;
@@ -125,9 +121,8 @@
           margin-bottom: 12px;
         }
 
-        .foot__contacts-number {
+        &-number {
           color: #1b1c21;
-          font-family: TT Lakes;
           font-size: 24px;
           font-style: normal;
           font-weight: 700;
@@ -146,16 +141,14 @@
 
       .foot__language {
         color: #1b1c21;
-        font-family: TT Lakes;
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
         line-height: 24px;
         letter-spacing: -0.2px;
-      }
-
-      .foot__language:hover {
-        color: #7e7e82;
+        &:hover {
+          color: #7e7e82;
+        }
       }
     }
   }
