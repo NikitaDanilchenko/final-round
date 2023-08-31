@@ -198,6 +198,11 @@
   }
 
   &__button {
+    transition: all 0.5s ease 0.2s;
+    cursor: pointer;
+    &:hover {
+      filter: opacity(80%);
+    }
     @media (max-width: 767px) {
       grid-column-start: 2;
     }

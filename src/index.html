@@ -10,65 +10,68 @@
 
 <body>
   <aside class="aside">
-    <section class="aside__top">
-      <header class="header-aside">
-        <div class="header-aside__burger">
-          <button class="header-aside__burger header-aside__icon">
-            <img src="img/icon/ic-burger-aside.svg" alt="burger-aside">
-          </button>
-          <button class="header-aside__burger header-aside__logo">
-            <img src="img/icon/Group.svg" alt="Group">
-          </button>
-        </div>
-        <div class="header-aside__search">
-          <button class="header-aside__search header-aside__icon">
-            <img src="img/icon/ic-search.svg" alt="search">
-          </button>
-        </div>
-      </header>
-      <nav class="nav-items">
-        <a class="nav-items__item" href="#">
-          Ремонт техники</a>
-        <a class="nav-items__item" href="#">
-          Услуги и сервисы</a>
-        <a class="nav-items__item" href="#">
-          Корпоративным клиентам</a>
-        <a class="nav-items__item" href="#">
-          Продавцам техники</a>
-        <a class="nav-items__item" href="#">
-          Партнерам</a>
-        <a class="nav-items__item" href="#">
-          Производителям</a>
-        <a class="nav-items__item" href="#">
-          Наши сервисные центры</a>
-        <a class="nav-items__item" href="#">
-          Контакты</a>
-      </nav>
-    </section>
-    <section class="aside__bottom">
-      <footer class="foot">
-        <div class=" foot foot__icons">
-          <button class="icon">
-            <img src="img/icon/ic-call.svg" alt="call">
-          </button>
-          <button class="icon">
-            <img src="img/icon/ic-chat.svg" alt="chat">
-          </button>
-          <button class="icon">
-            <img src="img/icon/ic-profile.svg" alt="profile">
-          </button>
-        </div>
-        <div class="foot foot__contacts">
-          <a href="mail@cps.com" class="foot__contacts-email">mail@cps.com</a>
-          <a href="8 800 890 8900" class="foot__contacts-number">8 800 890 8900</a>
-        </div>
-        <div class="foot foot__languages">
-          <button class="foot__language ">RU</button>
-          <button class="foot__language ">EN</button>
-          <button class="foot__language ">CH</button>
-        </div>
-      </footer>
-    </section>
+    <div class="aside__wrapper">
+      <section class="aside__top">
+        <header class="header-aside">
+          <div class="header-aside__burger">
+            <button class="header-aside__burger header-aside__icon close-aside">
+              <img src="img/icon/ic-close.svg" alt="burger-close">
+            </button>
+            <button class="header-aside__burger header-aside__logo">
+              <img src="img/icon/Group.svg" alt="Group">
+            </button>
+          </div>
+          <div class="header-aside__search">
+            <button class="header-aside__search header-aside__icon">
+              <img src="img/icon/ic-search.svg" alt="search">
+            </button>
+          </div>
+        </header>
+        <nav class="nav-items">
+          <a class="nav-items__item" href="#">
+            Ремонт техники</a>
+          <a class="nav-items__item" href="#">
+            Услуги и сервисы</a>
+          <a class="nav-items__item" href="#">
+            Корпоративным клиентам</a>
+          <a class="nav-items__item" href="#">
+            Продавцам техники</a>
+          <a class="nav-items__item" href="#">
+            Партнерам</a>
+          <a class="nav-items__item" href="#">
+            Производителям</a>
+          <a class="nav-items__item" href="#">
+            Наши сервисные центры</a>
+          <a class="nav-items__item" href="#">
+            Контакты</a>
+        </nav>
+      </section>
+      <section class="aside__bottom">
+        <footer class="foot">
+          <div class=" foot foot__icons">
+            <button class="btn icon aside-call">
+              <img src="img/icon/ic-call.svg" alt="call">
+            </button>
+            <button class="btn icon aside-feedback">
+              <img src="img/icon/ic-chat.svg" alt="chat">
+            </button>
+            <button class="btn icon">
+              <img src="img/icon/ic-profile.svg" alt="profile">
+            </button>
+          </div>
+          <div class="foot foot__contacts">
+            <a href="mail@cps.com" class="foot__contacts-email">mail@cps.com</a>
+            <a href="8 800 890 8900" class="foot__contacts-number">8 800 890 8900</a>
+          </div>
+          <div class="foot foot__languages">
+            <button class="foot__language ">RU</button>
+            <button class="foot__language ">EN</button>
+            <button class="foot__language ">CH</button>
+          </div>
+        </footer>
+      </section>
+    </div>
+    <div class="aside__overlay"></div>
   </aside>
   <header class="menu">
     <div class="container">
@@ -80,7 +83,7 @@
         </div>
         <div class="menu__icon-wrap">
           <img class="btn menu__hiden menu-call" src="img/icon/ic-call.svg" alt="Call">
-          <img class="btn menu__hiden menu-chat" src="img/icon/ic-chat.svg" alt="Chat">
+          <img class="btn menu__hiden menu-feedback" src="img/icon/ic-chat.svg" alt="Chat">
           <img class="btn menu__hiden" src="img/icon/ic-profile.svg" alt="Profile">
 
           <div class="menu__divider menu__divider_icon-wrap"></div>
@@ -463,6 +466,46 @@
       </div>
     </footer>
   </main>
+  <div class="modal modal-feedback">
+    <div class="modal__wrapper">
+      <div class="modal__icon">
+        <img class="btn modal__close modal__close_feedback" src="img/icon/ic-close.svg" alt="feedback-close">
+      </div>
+      <div class="modal__title">Обратная связь</div>
+      <form action="#" class="modal__form">
+        <input type="text" name="name" required placeholder="Имя">
+        <input type="number" name="phone" required placeholder="Телефон">
+        <input type="email" name="email" required placeholder="Электронная почта">
+        <textarea name="message" cols="auto" rows="auto" required placeholder="Сообщение"></textarea>
+      </form>
+      <div class="modal__text">Нажимая “отправить”, вы даете согласие на <a href="#"
+          class="modal__text modal__text_link">обработку персональных данных</a> и соглашаетесь с
+        нашей <a href="#" class="modal__text modal__text_link">политикой конфиденциальности</a></div>
+      <div class="modal__button">
+        <img src="img/icon/Send.svg" alt="send">
+      </div>
+    </div>
+    <div class="modal__overlay-feedback"></div>
+  </div>
+
+  <div class="modal modal-call">
+    <div class="modal__wrapper">
+      <div class="modal__icon">
+        <img class="btn modal__close modal__close_call" src="img/icon/ic-close.svg" alt="call-close">
+      </div>
+      <div class="modal__title">Заказать звонок</div>
+      <form action="#" class="modal__form">
+        <input type="number" name="phone" required placeholder="Телефон">
+      </form>
+      <div class="modal__text">Нажимая “отправить”, вы даете согласие на <a href="#"
+          class="modal__text modal__text_link">обработку персональных данных</a> и соглашаетесь с
+        нашей <a href="#" class="modal__text modal__text_link">политикой конфиденциальности</a></div>
+      <div class="modal__button">
+        <img src="img/icon/Send.svg" alt="send">
+      </div>
+    </div>
+    <div class="modal__overlay-call"></div>
+  </div>
 </body>
 
 </html>

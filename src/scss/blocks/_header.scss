@@ -24,14 +24,10 @@
     cursor: pointer;
   }
   &__icon-wrap {
-    // width: 118px;
     display: flex;
     gap: 15px;
     justify-content: space-between;
     align-items: center;
-    @media (min-width: 768px) {
-      //   width: 290px;
-    }
   }
   &__divider {
     width: 2px;
