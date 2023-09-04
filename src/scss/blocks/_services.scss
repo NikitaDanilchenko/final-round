@@ -111,6 +111,9 @@
         }
       }
     }
+    // &__dop {
+    //   display: none;
+    // }
     &__button {
       display: flex;
       border: none;
@@ -137,11 +140,20 @@
         margin: 10px 0 0 25px;
         padding-left: 15px;
       }
-      &::before {
+      &_show::before {
         content: url("/img/icon/ic-expand.svg");
         position: absolute;
         left: -5px;
       }
+      // &_hide::before {
+      //   content: "";
+      //   background: url("/img/icon/click_down.svg");
+      //   left: 5px;
+      //   top: -1px;
+      //   width: 24px;
+      //   height: 24px;
+      //   position: absolute;
+      // }
     }
   }
   &-image {

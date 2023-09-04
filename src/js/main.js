@@ -80,6 +80,8 @@ modalOverlayCall.addEventListener("click", () => {
 
 //==========================================================================
 
+//==========================================================================
+
 // Получение ссылки на кнопку с классом "technic__click_show"
 const btn = document.querySelector(".technic__click_show");
 // Получение массива карточек с классом "swiper-slide"
@@ -146,6 +148,7 @@ function handleClick() {
 // Вызов функций при загрузке страницы
 handleResize();
 
+//Вызов функции дял блока Types
 function computeSecondHiddenCardIndex() {
   // 0..320     321..767    768..1119   1120..
   // Infinity   Infinity    6            8
